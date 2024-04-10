@@ -9,7 +9,7 @@ import applicationRouter from "./routes/applicationRoutes.js";
 import {dbConnection} from "./database/dbConnection.js"
 import {errorMiddleware} from "./middlewares/error.js"
 
-FRONTEND_URL = "https://legendary-narwhal-5a2ed4.netlify.app"
+const FRONTEND_URL = "https://legendary-narwhal-5a2ed4.netlify.app"
 const app = express()
 dotenv.config({path: "./config/config.env"})
 
