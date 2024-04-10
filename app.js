@@ -9,12 +9,13 @@ import applicationRouter from "./routes/applicationRoutes.js";
 import {dbConnection} from "./database/dbConnection.js"
 import {errorMiddleware} from "./middlewares/error.js"
 
+FRONTEND_URL = "https://legendary-narwhal-5a2ed4.netlify.app"
 const app = express()
 dotenv.config({path: "./config/config.env"})
 
 app.use(
     cors({
-      origin: [process.env.FRONTEND_URL],
+      origin: [FRONTEND_URL],
       method: ["GET", "POST", "DELETE", "PUT"],
       credentials: true,
     })
